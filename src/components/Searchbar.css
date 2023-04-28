@@ -1,0 +1,20 @@
+input {
+    flex-shrink: 1;
+    height: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1rem;
+    line-height: 2;
+    border-width: 1px;
+    background-color: var(--background-color);
+    border-radius: 0.5rem;
+    user-select: none;
+    border-color: #83838369;
+
+}
+
+input:focus {
+    outline: 2px solid #9191917e;
+    outline-offset: 2px;
+    
+}

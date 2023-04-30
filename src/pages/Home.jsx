@@ -1,4 +1,7 @@
-export default function Navbar() {
+import NutritionFact from '../components/NutritionFacts'
+
+export default function Home() {
+  
   return (
     <section>
       <h2>Welcome to Recipe Website!</h2>
@@ -12,6 +15,7 @@ export default function Navbar() {
         don't forget to sign up for our newsletter to get the latest news and
         updates.
       </p>
+      <NutritionFact></NutritionFact>
     </section>
   );
 }

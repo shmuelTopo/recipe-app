@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useSearchParams, useNavigate, useLocation } from "react-router-dom";
-import tmpSearchResults from "../pizza-sample-search.json";
-import { searchReusltsTransformer } from "../utilitis/recipesTransformer";
-import RecipeResultBox from "../components/RecipeResultBox/RecipeResultBox";
+import tmpSearchResults from "../../pizza-sample-search.json";
+import { searchReusltsTransformer } from "../../utilitis/recipesTransformer";
+import RecipeResultBox from "../../components/RecipeResultBox/RecipeResultBox";
 import "./ResultsPage.css";
 
 function ResultsPage() {

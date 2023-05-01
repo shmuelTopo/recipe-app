@@ -13,14 +13,16 @@ export default function Navbar() {
   };
   return (
     <nav>
-      <SwapThemes />
-      <h1 className="flex-1 mx-4">
-        <a href="/" className="normal-case text-xl">
-          Pcs Recipes
-        </a>
-      </h1>
-      <div className="flex-none gap-2">
-        <Searchbar callback={search} />
+      <div className="nav-items">
+        <SwapThemes />
+        <h1 className="flex-1 mx-4">
+          <a href="/" className="normal-case text-xl">
+            Pcs Recipes
+          </a>
+        </h1>
+        <div className="flex-none gap-2">
+          <Searchbar callback={search} />
+        </div>
       </div>
     </nav>
   );

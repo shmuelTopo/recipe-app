@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import { useSearchParams, useNavigate, useLocation } from "react-router-dom";
 import tmpSearchResults from "../../pizza-sample-search.json";
 import { searchReusltsTransformer } from "../../utilitis/recipesTransformer";
-import RecipeResultBox from "../../components/RecipeResultBox/RecipeResultBox";
+import RecipeResultBox from "../../components/RecipeCard/RecipeCard";
 import "./ResultsPage.css";
 
 function ResultsPage() {
   let [searchParams] = useSearchParams();
   let [recipes] = useState(
+    //searchParams.get("query") instead of pizza when result are real
     searchReusltsTransformer(tmpSearchResults.pizza.results)
   );
   const navigate = useNavigate();

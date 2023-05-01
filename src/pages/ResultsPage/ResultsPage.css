@@ -1,9 +1,12 @@
 .recipes-results {
+  max-width: var(--max-width);
   border-radius: 0.5rem;
+  margin: auto;
   padding: 1rem;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1rem;
+  
 }
 
 @media screen and (min-width: 640px) {
@@ -20,7 +23,15 @@
 
 @media screen and (min-width: 1024px) {
   .recipes-results {
-    padding:1rem 5rem ;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    padding: 1rem 5rem;
+  }
+}
+
+@media screen and (min-width: 1268px) {
+  .recipes-results {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    padding: 1rem 10rem;
   }
 }
 

@@ -18,10 +18,12 @@ input {
 
 body {
   background-color: var(--background-color);
-  padding: 2rem 3rem;
-  margin: 5rem 0 0 0;
+  padding: 2rem 1rem;
+  margin: 4.5rem auto 0 auto;
   color: var(--text-color);
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  max-width: var(--max-width);
+  font-family: ui-sargba(141, 141, 141, 0.078) i, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
 }

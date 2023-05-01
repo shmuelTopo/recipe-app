@@ -1,6 +1,6 @@
-import Searchbar from "./Searchbar";
-import SwapThemes from "./SwapThemes";
-import { useSearchParams, useNavigate } from "react-router-dom";
+import Searchbar from "../Searchbar/Searchbar";
+import SwapThemes from "../SwapThemes/SwapThemes";
+import { useNavigate } from "react-router-dom";
 
 import "./Navbar.css";
 
@@ -8,7 +8,7 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   const search = (query) => {
-    if(!query) return
+    if (!query) return;
     navigate(`/search?query=${query}`);
   };
   return (

@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
 import { useSearchParams, useNavigate, useLocation } from "react-router-dom";
 import tmpSearchResults from "../pizza-sample-search.json";
-import NutritionFacts from "../components/NutritionFacts";
 import { searchReusltsTransformer } from "../utilitis/recipesTransformer";
+import RecipeResultBox from "../components/RecipeResultBox/RecipeResultBox";
+import "./ResultsPage.css";
 
-function Search() {
+function ResultsPage() {
   let [searchParams] = useSearchParams();
-  let [recipes, setRecipes] = useState(
+  let [recipes] = useState(
     searchReusltsTransformer(tmpSearchResults.pizza.results)
   );
   const navigate = useNavigate();
   const location = useLocation();
-  
 
   useEffect(() => {
     console.log("search param has change");
@@ -22,14 +22,21 @@ function Search() {
 
   useEffect(() => {
     console.log(recipes);
-  }, [recipes])
+  }, [recipes]);
 
   return (
-    <div>
-      <h1>{searchParams.get("query")}</h1>
-      <NutritionFacts nutrients={recipes[0].nutrients}></NutritionFacts>
-    </div>
+    <>
+      <section className="recipes-results">
+        {recipes && (
+          <>
+            {recipes.map((result) => {
+              return <RecipeResultBox key={result.id} recipe={result} />;
+            })}
+          </>
+        )}
+      </section>
+    </>
   );
 }
 
-export default Search;
+export default ResultsPage;

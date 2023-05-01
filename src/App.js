@@ -1,8 +1,8 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home"
-import Search from "./pages/ResultsPage"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./pages/Home";
+import ResultsPage from "./pages/ResultsPage";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="search" element={<Search></Search>} />
+        <Route path="search" element={<ResultsPage></ResultsPage>} />
       </Routes>
     </BrowserRouter>
   );

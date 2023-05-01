@@ -12,6 +12,7 @@ const importantNutrients = [
 ];
 
 function searchReusltsTransformer(searchResults) {
+  console.log(searchResults)
   return searchResults.map((recipe) => {
     const {
       id,
@@ -19,6 +20,7 @@ function searchReusltsTransformer(searchResults) {
       readyInMinutes,
       servings,
       sourceUrl,
+      sourceName,
       spoonacularSourceUrl,
       image,
       summary,
@@ -43,6 +45,7 @@ function searchReusltsTransformer(searchResults) {
       readyInMinutes,
       servings,
       sourceUrl,
+      sourceName,
       spoonacularSourceUrl,
       image,
       ingredients: nutrition.ingredients,

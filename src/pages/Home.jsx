@@ -1,4 +1,3 @@
-import NutritionFact from '../components/NutritionFacts'
 
 export default function Home() {
   
@@ -15,7 +14,6 @@ export default function Home() {
         don't forget to sign up for our newsletter to get the latest news and
         updates.
       </p>
-      <NutritionFact></NutritionFact>
     </section>
   );
 }

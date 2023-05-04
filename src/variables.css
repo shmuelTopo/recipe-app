@@ -6,12 +6,12 @@
   --accent-color: #1fb2a5;
   --text-color: #676767;
   --link-color: #543fd7;
-  --max-width: 1400px;
+  --max-width: 1300px;
 }
 
 html[data-theme="light"] {
-  --background-color: #eee;
-  --surface-color: rgb(242, 242, 242);
+  --background-color: #e4e4e4;
+  --surface-color: rgb(255, 255, 255);
   --primary-color: #d2d5d8;
   --pirmary-color-hover: #c6c8ca;
   --text-color: #3b3d40;

@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
-import tempImg from "../../images/image-placeholder.jpg";
+import tempImg from "../../images/placeholder-image.webp";
+import Clock from "./Clock.jsx";
+import Like from "./Like.jsx";
 import FallbackImage from "../FallbackImage/FallbackImage";
 import "./RecipeCard.css";
 
 export default function RecipeCard({ recipe }) {
+  console.log(recipe);
   return (
     <Link to={`/recipe?id=${recipe.id}`} state={recipe}>
       <section className="recipe-card">
@@ -16,9 +19,19 @@ export default function RecipeCard({ recipe }) {
           />
         </div>
         <div className="recipe-info">
-          <p className="recipe-tag">{recipe && recipe.dishTypes[0]}</p>
-          <p className="title">{recipe.title}</p>
-          <p className="text-sm">{recipe.sourceName}</p>
+            <p className="recipe-tag">{recipe && recipe.dishTypes[0]}</p>
+            <p className="title">{recipe.title}</p>
+
+          <div className="recipe-card-footer">
+            <div>
+              <Clock height="16px" />
+              <span>{recipe.readyInMinutes} minutes</span>
+            </div>
+            <div>
+              <span> {recipe.likes}</span>
+              <Like height="16px" />
+            </div>
+          </div>
         </div>
       </section>
     </Link>

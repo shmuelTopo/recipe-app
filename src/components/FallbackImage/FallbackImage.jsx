@@ -1,11 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function FallbackImage({stackOfImages}) {
   const [imagesStack, setImagesStack] = useState([...stackOfImages])
-  useEffect(() => {
-    console.log("img loaded", imagesStack);
-  }, [imagesStack]);
-
   function imageLoded(index) {
     const newStack = imagesStack.slice(0, index+1)
     setImagesStack(newStack)

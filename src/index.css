@@ -27,3 +27,7 @@ body {
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     "Noto Color Emoji";
 }
+
+svg {
+  color: var(--text-color);
+}

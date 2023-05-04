@@ -22,6 +22,7 @@ function searchReusltsTransformer(searchResults) {
       sourceUrl,
       sourceName,
       dishTypes,
+      aggregateLikes,
       spoonacularSourceUrl,
       image,
       summary,
@@ -49,12 +50,13 @@ function searchReusltsTransformer(searchResults) {
       sourceName,
       dishTypes,
       spoonacularSourceUrl,
+      likes: aggregateLikes,
       image,
       ingredients: nutrition.ingredients,
       nutrients: {
         nutritionFacts,
         caloriesBreakdown: nutrition.caloricBreakdown,
-        weightPerServing: nutrition.weightPerServing
+        weightPerServing: nutrition.weightPerServing,
       },
       summary,
       analyzedInstructions,

@@ -15,7 +15,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "publish": "npm run build; npm run upload",
+    "upload": "scp -P 7822 -r build/* shmuelde@shmuel.dev:/home/shmuelde/recipes.shmuel.dev"
+  
   },
   "eslintConfig": {
     "extends": [
